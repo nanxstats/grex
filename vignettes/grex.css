@@ -132,7 +132,7 @@ pre:not([class]) {
 }
 
 code {
-  font-family: "Lucida Console", Monaco, Consolas, 'Courier New', monospace;
+  font-family: Menlo, Monaco, "Lucida Console", Consolas, "Courier New", monospace;
   font-size: 85%;
 }
 p > code, li > code {
