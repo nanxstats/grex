@@ -1,7 +1,7 @@
 Package: grex
 Type: Package
 Title: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
-Version: 1.0.0
+Version: 1.0
 Author: Nan Xiao <nanx@uchicago.edu>, Gao Wang <gaow@uchicago.edu>
 Maintainer: Nan Xiao <nanx@uchicago.edu>
 Description: Map Ensembl gene ID to other ID systems.
