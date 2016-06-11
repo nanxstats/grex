@@ -4,7 +4,7 @@
 [![CRAN Version](http://www.r-pkg.org/badges/version/grex)](http://www.r-pkg.org/badges/version/grex)
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/grex)](http://cranlogs.r-pkg.org/badges/grex)
 
-`grex` offers a minimal solution for mapping Ensembl gene IDs to Entrez IDs, HGNC gene symbols, and UniProt IDs, for Genotype-Tissue Expression (GTEx) data.
+`grex` offers a minimal dependency solution for mapping Ensembl gene IDs to Entrez IDs, HGNC gene symbols, and UniProt IDs, for Genotype-Tissue Expression (GTEx) data.
 
 ## Installation
 
