@@ -50,13 +50,14 @@ grex = function(ensembl_id) {
 
 }
 
-#' Remove Version Numbers in Raw GTEx Gene IDs
+#' Remove Version Numbers in Raw GTEx (GENCODE) Gene IDs
 #'
-#' Remove the `.version` part in raw GTEx gene IDs to make standard Ensembl IDs.
+#' Remove the `.version` part in raw GTEx (GENCODE) gene IDs to
+#' produce Ensembl IDs.
 #'
-#' @param gtex_id Character vector of GTEx gene IDs
+#' @param gtex_id Character vector of GTEx (GENCODE) gene IDs
 #'
-#' @return Character vector of standard Ensembl IDs
+#' @return Character vector of Ensembl IDs
 #'
 #' @export cleanid
 #'
