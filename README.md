@@ -27,7 +27,7 @@ To load the package in R, simply use
 library("grex")
 ```
 
-and you are all set. See the vignette: `vignette("grex")` for a quick-start guide.
+and you are all set. See [the vignette](http://nanx.me/grex/doc/) (or open with `vignette("grex")` in R) for a quick-start guide.
 
 ## Links
 
