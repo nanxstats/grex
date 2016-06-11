@@ -1,0 +1,102 @@
+---
+title: "Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data"
+author: "Nan Xiao <<nanx@uchicago.edu>><br>Gao Wang <<gaow@uchicago.edu>>"
+date: "`r Sys.Date()`"
+bibliography: grex.bib
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+    css: grex.css
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data}
+---
+
+# Introduction
+
+The Genotype-Tissue Expression (GTEx) project [@gtex] aims at measuring human
+tissue-specific gene expression levels. With the collected data,
+we will be able to explore the landscape of gene expression, gene regulation,
+and the deeper connection between genetic variation and gene expression.
+
+Raw GTEx data contains expression measurements from various types
+of elements (such as genes, pseudogenes, noncoding DNA sequences)
+covering the whole genome. For some analysis, it might be desirable
+to only keep a subset of the data, for example, data from protein coding genes.
+In such cases, mapping the original Ensembl gene IDs to Entrez gene IDs or
+HGNC symbols become an essential step in the analysis pipeline.
+
+The `grex` package offers a minimal solution to do such ID mappings.
+Currently, an Ensembl ID from GTEx can be mapped to its Entrez Gene ID,
+HGNC gene symbol, HGNC gene name, cytogenetic location, and UniProt ID.
+We also limit the scope on the Ensembl IDs appeared in the gene read count data.
+Ensembl IDs from the transcript read count data will be considered in future versions.
+
+# Mapping Table
+
+To facilitate such ID conversion tasks, the `grex` package has a built-in
+mapping table derived from the well-known annotation data package
+`org.Hs.eg.db` [@hsdb]. The mapping data we used has integrated mapping
+information from Ensembl and NCBI, to maximize the possibility of finding
+a matched Entrez ID. The R code for creating the table is located 
+[here](https://github.com/road2stat/grex/blob/master/data-raw/data-generator.R).
+
+Not surprisingly, when creating such a table, there were hundreds of cases
+where a single Ensembl ID can be mapped to multiple Entrez Gene IDs.
+To create a one-to-one mapping, we took a simple approach: we just removed
+the duplicated Entrez IDs and only kept the first we encountered in the
+original database. Therefore, there might be cases where the mapping is
+not 100% accurate. If you have such doubts for particular results,
+please try searching the original ID on the Ensembl website and see if we
+got a correct mapped ID.
+
+# Code Example
+
+As an example, here we use the Ensembl IDs from GTEx V6 gene count data
+and select 100 IDs from them:
+
+```{r,echo=FALSE}
+options(width = 90)
+```
+
+```{r}
+library("grex")
+data("gtexv6")
+id = gtexv6[101:200]
+df = grex(id)
+tail(df)
+```
+
+The elements which cannot be mapped accurately will be `NA`.
+
+Genes with a mapped Entrez ID:
+
+```{r}
+filtered_genes = df[!is.na(df$entrez_id), c('ensembl_id', 'entrez_id')]
+head(filtered_genes)
+```
+
+If you want to start from raw gene IDs provided by GTEx (e.g. `ENSG00000227232.4`),
+the function `cleanid()` can help you remove the `.version` part in them.
+
+# What's Next?
+
+The next step is usually removing (or imputing) the genes
+with `NA` IDs, and then select the genes to keep.
+
+Notably, as was observed in the complete gene read count data,
+in about 100 cases, multiple Ensembl IDs can be mapped to one
+single Entrez ID. Post-processing steps may also be needed for such genes.
+
+# Acknowledgements
+
+We thank members of [Stephens lab](http://stephenslab.uchicago.edu)
+(Kushal K Dey, Lei Sun) for their valuable suggestions and helpful
+discussions on this problem.
+
+<hr>
+
+Project website: [http://nanx.me/grex](http://nanx.me/grex)
+
+# References

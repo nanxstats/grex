@@ -1,0 +1,17 @@
+Package: grex
+Type: Package
+Title: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
+Version: 1.0.0
+Author: Nan Xiao <nanx@uchicago.edu>, Gao Wang <gaow@uchicago.edu>
+Maintainer: Nan Xiao <nanx@uchicago.edu>
+Description: Map Ensembl gene ID to other ID systems.
+License: GPL
+LazyData: TRUE
+VignetteBuilder: knitr
+URL: http://nanx.me/grex
+BugReports: https://github.com/road2stat/grex/issues
+Depends:
+    R (>= 3.0.2)
+Suggests:
+    knitr
+RoxygenNote: 5.0.1
