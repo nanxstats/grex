@@ -4,7 +4,7 @@ Title: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
 Version: 1.1
 Author: Nan Xiao <nanx@uchicago.edu>, Gao Wang <gaow@uchicago.edu>
 Maintainer: Nan Xiao <nanx@uchicago.edu>
-Description: Map the 'Ensembl' gene identifiers from Genotype-Tissue Expression (GTEx) data to identifiers in other annotation systems, including Entrez, HGNC, and UniProt.
+Description: Convert the 'Ensembl' gene identifiers from Genotype-Tissue Expression (GTEx) data to identifiers in other annotation systems, including 'Entrez', 'HGNC', and 'UniProt'.
 License: GPL
 LazyData: TRUE
 VignetteBuilder: knitr
