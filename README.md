@@ -1,7 +1,7 @@
 # grex
 
 [![Build Status](https://travis-ci.org/road2stat/grex.svg?branch=master)](https://travis-ci.org/road2stat/grex)
-[![CRAN Version](http://www.r-pkg.org/badges/version/grex)](http://www.r-pkg.org/badges/version/grex)
+[![CRAN Version](http://www.r-pkg.org/badges/version/grex)](https://cran.r-project.org/package=grex)
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/grex)](http://cranlogs.r-pkg.org/badges/grex)
 
 `grex` offers a minimal dependency solution for mapping Ensembl gene IDs to Entrez IDs, HGNC gene symbols, and UniProt IDs, for Genotype-Tissue Expression (GTEx) data.
@@ -32,4 +32,5 @@ and you are all set. See [the vignette](http://nanx.me/grex/doc/) (or open with 
 ## Links
 
 * Project website: [http://nanx.me/grex](http://nanx.me/grex)
+* CRAN: [https://cran.r-project.org/package=grex](https://cran.r-project.org/package=grex)
 * GitHub: [https://github.com/road2stat/grex](https://github.com/road2stat/grex)
