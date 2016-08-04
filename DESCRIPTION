@@ -2,8 +2,8 @@ Package: grex
 Type: Package
 Title: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
 Version: 1.2
-Author: Nan Xiao <nanx@uchicago.edu>, Gao Wang <gaow@uchicago.edu>, Lei Sun <sunl@uchicago.edu>
-Maintainer: Nan Xiao <nanx@uchicago.edu>
+Author: Nan Xiao <me@nanx.me>, Gao Wang <gaow@uchicago.edu>, Lei Sun <sunl@uchicago.edu>
+Maintainer: Nan Xiao <me@nanx.me>
 Description: Convert the 'Ensembl' gene identifiers from Genotype-Tissue Expression (GTEx) data to identifiers in other annotation systems, including 'Entrez', 'HGNC', and 'UniProt'.
 License: GPL
 LazyData: TRUE

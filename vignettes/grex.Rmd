@@ -1,6 +1,6 @@
 ---
 title: "Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data"
-author: "Nan Xiao <<nanx@uchicago.edu>><br>Gao Wang <<gaow@uchicago.edu>>"
+author: "Nan Xiao <<http://nanx.me>><br>Gao Wang <<gaow@uchicago.edu>><br>Lei Sun <<sunl@uchicago.edu>>"
 date: "`r Sys.Date()`"
 bibliography: grex.bib
 output:
@@ -94,8 +94,8 @@ single Entrez ID. Post-processing steps may also be needed for such genes.
 # Acknowledgements
 
 We thank the members of [Stephens lab](http://stephenslab.uchicago.edu)
-(Kushal K Dey, Lei Sun, Michael Turchin) for their valuable suggestions
+(Kushal K Dey, Michael Turchin) for their valuable suggestions
 and helpful discussions on this problem.
-Project website: [http://nanx.me/grex](http://nanx.me/grex)
+Project website: [http://nanx.me/grex/](http://nanx.me/grex/)
 
 # References
