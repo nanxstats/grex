@@ -5,7 +5,7 @@ body {
   overflow: visible;
   padding-left: 2em;
   padding-right: 2em;
-  font-family: Merriweather, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: Lato, "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 16px;
   line-height: 1.35;
 }
@@ -214,7 +214,7 @@ code > span.st { color: #718c00; } /* String */
 code > span.co { color: #8e908c; } /* Comment */
 code > span.ot { color: #4d4d4c; } /* OtherToken */
 code > span.al { color: #ff0000; } /* AlertToken */
-code > span.fu { color: #4271ae; } /* Function calls */ 
+code > span.fu { color: #4271ae; } /* Function calls */
 code > span.er { color: #a61717; } /* ErrorTok */
 
 /* centering images */

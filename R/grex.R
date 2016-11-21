@@ -1,6 +1,7 @@
 #' Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
 #'
-#' Map Ensembl IDs to Entrez Gene ID, HGNC symbol, and UniProt ID.
+#' Map Ensembl IDs to Entrez Gene ID, HGNC symbol, and UniProt ID,
+#' with basic annotation information such as gene type.
 #'
 #' @param ensembl_id Character vector of Ensembl IDs
 #'
@@ -13,19 +14,21 @@
 #' \item \code{hgnc_name} - HGNC gene name
 #' \item \code{cyto_loc} - Cytogenetic location
 #' \item \code{uniprot_id} - UniProt ID
+#' \item \code{gene_biotype} - Gene type
 #' }
 #' The elements that cannot be mapped will be \code{NA}.
 #'
 #' @export grex
 #'
 #' @examples
-#' # Ensembl IDs in GTEx v6 gene count data
-#' data("gtexv6")
+#' # Ensembl IDs in GTEx v6p gene count data
+#' data("gtexv6p")
 #' # select 100 IDs as example
-#' id = gtexv6[101:200]
+#' id = gtexv6p[101:200]
 #' df = grex(id)
-#' # show Ensembl IDs which have a mapped Entrez ID
-#' df[!is.na(df$entrez_id), c('ensembl_id', 'entrez_id')]
+#' # Rows that have a mapped Entrez ID
+#' df[!is.na(df$"entrez_id"),
+#'    c("ensembl_id", "entrez_id", "gene_biotype")]
 grex = function(ensembl_id) {
 
   id = as.character(ensembl_id)

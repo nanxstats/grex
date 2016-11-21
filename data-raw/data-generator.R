@@ -5,8 +5,8 @@
 # Get package source link from:
 # https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html
 
-system('wget https://bioconductor.org/packages/release/data/annotation/src/contrib/org.Hs.eg.db_3.3.0.tar.gz -P ~/')
-system('tar -xvf ~/org.Hs.eg.db_3.3.0.tar.gz -C ~/')
+system('wget https://bioconductor.org/packages/release/data/annotation/src/contrib/org.Hs.eg.db_3.4.0.tar.gz -P ~/')
+system('tar -xvf ~/org.Hs.eg.db_3.4.0.tar.gz -C ~/')
 
 # connect to the SQLite db
 library('DBI')
@@ -55,8 +55,22 @@ grex_db$'X_id' = NULL
 # disconnect from db
 dbDisconnect(con)
 
+# add gene type to mapping table
+library('biomaRt')
+ensembl_mart = useMart('ensembl', dataset = 'hsapiens_gene_ensembl')
+
+ensembl_ids = grex_db$'ensembl_id'
+
+gene_type_table = getBM(
+  attributes = c('ensembl_gene_id', 'gene_biotype'),
+  filters = 'ensembl_gene_id',
+  values = ensembl_ids, mart = ensembl_mart)
+
+row.names(gene_type_table) = gene_type_table$'ensembl_gene_id'
+grex_db$'gene_biotype' = gene_type_table[grex_db$'ensembl_id', 'gene_biotype']
+
 # clean up workspace
-rm(list = c('con', 'key', 'cytogenetic_locations', 'ensembl', 'gene_info', 'genes', 'uniprot'))
+rm(list = c('con', 'key', 'cytogenetic_locations', 'ensembl', 'gene_info', 'genes', 'uniprot', 'ensembl_mart', 'ensembl_ids', 'gene_type_table'))
 
 # save grex db to package directory
 save(grex_db, file = 'R/sysdata.rda', compress = 'xz')

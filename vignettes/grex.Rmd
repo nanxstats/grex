@@ -1,6 +1,8 @@
 ---
 title: "Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data"
-author: "Nan Xiao <<http://nanx.me>><br>Gao Wang <<gaow@uchicago.edu>><br>Lei Sun <<sunl@uchicago.edu>>"
+author: "Nan Xiao <<http://nanx.me>><br>
+         Gao Wang <<gaow@uchicago.edu>><br>
+         Lei Sun <<sunl@uchicago.edu>>"
 date: "`r Sys.Date()`"
 bibliography: grex.bib
 output:
@@ -29,9 +31,10 @@ to only keep a subset of the data, for example, data from protein coding genes.
 In such cases, mapping the original Ensembl gene IDs to Entrez gene IDs or
 HGNC symbols become an essential step in the analysis pipeline.
 
-The `grex` package offers a minimal dependency solution to do such ID mappings.
+`grex` offers a **minimal dependency** solution to do such ID mappings.
 Currently, an Ensembl ID from GTEx can be mapped to its Entrez gene ID,
-HGNC gene symbol, HGNC gene name, cytogenetic location, and UniProt ID.
+HGNC gene symbol, and UniProt ID, with basic annotation information
+such as HGNC gene name, cytogenetic location, and gene type.
 We also limit our scope on the Ensembl IDs appeared in the gene read count data.
 Ensembl IDs from transcript data will be considered in future versions.
 
@@ -55,7 +58,7 @@ got a correct mapped ID.
 
 # Code Example
 
-As an example, we use the Ensembl IDs from GTEx V6 gene count data
+As an example, we use the Ensembl IDs from GTEx V6p gene count data
 and select 100 IDs:
 
 ```{r,echo=FALSE}
@@ -64,8 +67,8 @@ options(width = 90)
 
 ```{r}
 library("grex")
-data("gtexv6")
-id = gtexv6[101:200]
+data("gtexv6p")
+id = gtexv6p[101:200]
 df = grex(id)
 tail(df)
 ```
@@ -75,7 +78,8 @@ The elements which cannot be mapped accurately will be `NA`.
 Genes with a mapped Entrez ID:
 
 ```{r}
-filtered_genes = df[!is.na(df$entrez_id), c('ensembl_id', 'entrez_id')]
+filtered_genes = df[!is.na(df$"entrez_id"),
+                    c("ensembl_id", "entrez_id", "hgnc_symbol", "gene_biotype")]
 head(filtered_genes)
 ```
 
@@ -85,7 +89,7 @@ remove the `.version` part in them, to produce Ensembl IDs.
 
 # What's Next?
 
-Usually, the next step is removing (or imputing) the genes
+Conventionally, the next step is removing (or imputing) the genes
 with `NA` IDs, and then select the genes to keep.
 Notably, as was observed in the complete gene read count data,
 in about 100 cases, multiple Ensembl IDs can be mapped to one
@@ -96,6 +100,6 @@ single Entrez ID. Post-processing steps may also be needed for such genes.
 We thank the members of [Stephens lab](http://stephenslab.uchicago.edu)
 (Kushal K Dey, Michael Turchin) for their valuable suggestions
 and helpful discussions on this problem.
-Project website: [http://nanx.me/grex/](http://nanx.me/grex/)
+Project website: [http://nanx.me/grex/](http://nanx.me/grex/).
 
 # References
