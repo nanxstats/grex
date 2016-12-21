@@ -1,6 +1,7 @@
 # grex
 
 [![Build Status](https://travis-ci.org/road2stat/grex.svg?branch=master)](https://travis-ci.org/road2stat/grex)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/grex?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/grex)
 [![CRAN Version](http://www.r-pkg.org/badges/version/grex)](https://cran.r-project.org/package=grex)
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/grex)](http://cranlogs.r-pkg.org/badges/grex)
 
