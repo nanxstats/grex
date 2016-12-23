@@ -9,7 +9,7 @@ Authors@R: c(
     )
 Maintainer: Nan Xiao <me@nanx.me>
 Description: Convert 'Ensembl' gene identifiers from Genotype-Tissue Expression (GTEx) data to identifiers in other annotation systems, including 'Entrez', 'HGNC', and 'UniProt'.
-License: GPL
+License: GPL-3 | file LICENSE
 LazyData: TRUE
 VignetteBuilder: knitr
 URL: http://nanx.me/grex/

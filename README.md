@@ -1,4 +1,4 @@
-# grex
+# grex  <a href="http://nanx.me/grex"><img src="http://nanx.me/images/project-grex.png" align="right" alt="logo" height="180" width="180" /></a>
 
 [![Build Status](https://travis-ci.org/road2stat/grex.svg?branch=master)](https://travis-ci.org/road2stat/grex)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/grex?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/grex)
