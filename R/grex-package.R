@@ -6,7 +6,7 @@
 #'
 #' \tabular{ll}{ Package: \tab grex\cr
 #' Type: \tab Package\cr
-#' License: \tab GPL\cr }
+#' License: \tab GPL-3\cr }
 #'
 #' @name grex-package
 #' @docType package
