@@ -1,7 +1,7 @@
 Package: grex
 Type: Package
 Title: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
-Version: 1.4.9000
+Version: 1.5
 Authors@R: c(
     person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre")),
     person("Gao", "Wang", email = "gaow@uchicago.edu", role = "aut"),
