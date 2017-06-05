@@ -6,7 +6,7 @@
 \title{Ensembl IDs from GTEx V6p Gene Read Count Data}
 \format{A character vector with 56,238 Ensembl IDs.}
 \source{
-\url{http://www.gtexportal.org}
+\url{https://www.gtexportal.org}
 }
 \usage{
 gtexv6p
