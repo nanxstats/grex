@@ -1,3 +1,10 @@
+# grex 1.5 (2017-06-05)
+
+## Improvements
+
+ * New pkgdown-based [website](https://nanx.me/grex/)
+ * Update reference database from the latest release version of `org.Hs.eg.db` (3.4.1)
+
 # grex 1.4 (2016-11-20)
 
 ## New Features

@@ -22,7 +22,7 @@ Or try the development version on GitHub:
 devtools::install_github("road2stat/grex")
 ```
 
-See [the vignette](https://nanx.me/grex/doc/) (or open with `vignette("grex")` in R) for a quick-start guide.
+[Browse the vignette](https://nanx.me/grex/doc/) (or open with `vignette("grex")` in R) for a quick-start guide.
 
 ## Links
 
