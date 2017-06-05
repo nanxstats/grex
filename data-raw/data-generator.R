@@ -5,8 +5,8 @@
 # Get package source link from:
 # https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html
 
-system('wget https://bioconductor.org/packages/release/data/annotation/src/contrib/org.Hs.eg.db_3.4.0.tar.gz -P ~/')
-system('tar -xvf ~/org.Hs.eg.db_3.4.0.tar.gz -C ~/')
+system('wget https://bioconductor.org/packages/release/data/annotation/src/contrib/org.Hs.eg.db_3.4.1.tar.gz -P ~/')
+system('tar -xvf ~/org.Hs.eg.db_3.4.1.tar.gz -C ~/')
 
 # connect to the SQLite db
 library('DBI')
