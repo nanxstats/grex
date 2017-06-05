@@ -100,6 +100,5 @@ single Entrez ID. Post-processing steps may also be needed for such genes.
 We thank the members of [Stephens lab](http://stephenslab.uchicago.edu)
 (Kushal K Dey, Michael Turchin) for their valuable suggestions
 and helpful discussions on this problem.
-Project website: [https://nanx.me/grex/](https://nanx.me/grex/).
 
 # References
