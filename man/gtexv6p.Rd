@@ -16,4 +16,3 @@ A dataset containing the Ensembl IDs from GTEx (V6p)
 gene read count data.
 }
 \keyword{datasets}
-

@@ -37,4 +37,3 @@ df = grex(id)
 df[!is.na(df$"entrez_id"),
    c("ensembl_id", "entrez_id", "gene_biotype")]
 }
-
