@@ -10,8 +10,6 @@ output:
     toc: true
     number_sections: true
     css: grex.css
-    includes:
-      in_header: header.html
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data}
@@ -97,7 +95,7 @@ single Entrez ID. Post-processing steps may also be needed for such genes.
 
 # Acknowledgements
 
-We thank the members of [Stephens lab](http://stephenslab.uchicago.edu)
+We thank the members of the [Stephens lab](http://stephenslab.uchicago.edu)
 (Kushal K Dey, Michael Turchin) for their valuable suggestions
 and helpful discussions on this problem.
 
