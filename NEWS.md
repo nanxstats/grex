@@ -1,3 +1,9 @@
+# grex 1.7 (2017-11-05)
+
+## Improvements
+
+- Update reference database from the latest release version of `org.Hs.eg.db` (3.4.2).
+
 # grex 1.6 (2017-09-27)
 
 ## Improvements
