@@ -42,8 +42,8 @@ To facilitate such ID conversion tasks, the `grex` package has a built-in
 mapping table derived from the well-known annotation data package
 `org.Hs.eg.db` [@hsdb]. The mapping data we used has integrated mapping
 information from Ensembl and NCBI, to maximize the possibility of finding
-a matched Entrez ID. The R code for creating the table is located 
-[here](https://github.com/road2stat/grex/blob/master/data-raw/data-generator.R).
+a matched Entrez ID. The R script for creating the mapping table is located 
+[here](https://github.com/road2stat/grex/blob/master/data-raw/mapping-table-generator.R).
 
 Not surprisingly, when creating such a table, there were hundreds of cases
 where a single Ensembl ID can be mapped to multiple Entrez gene IDs.

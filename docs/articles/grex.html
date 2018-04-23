@@ -92,7 +92,7 @@
 <div id="mapping-table" class="section level1">
 <h1 class="hasAnchor">
 <a href="#mapping-table" class="anchor"></a>Mapping Table</h1>
-<p>To facilitate such ID conversion tasks, the <code>grex</code> package has a built-in mapping table derived from the well-known annotation data package <code>org.Hs.eg.db</code> <span class="citation">(Carlson 2015)</span>. The mapping data we used has integrated mapping information from Ensembl and NCBI, to maximize the possibility of finding a matched Entrez ID. The R code for creating the table is located <a href="https://github.com/road2stat/grex/blob/master/data-raw/data-generator.R">here</a>.</p>
+<p>To facilitate such ID conversion tasks, the <code>grex</code> package has a built-in mapping table derived from the well-known annotation data package <code>org.Hs.eg.db</code> <span class="citation">(Carlson 2015)</span>. The mapping data we used has integrated mapping information from Ensembl and NCBI, to maximize the possibility of finding a matched Entrez ID. The R script for creating the mapping table is located <a href="https://github.com/road2stat/grex/blob/master/data-raw/mapping-table-generator.R">here</a>.</p>
 <p>Not surprisingly, when creating such a table, there were hundreds of cases where a single Ensembl ID can be mapped to multiple Entrez gene IDs. To create a one-to-one mapping, we took a simple approach: we just removed the duplicated Entrez IDs and only kept the first we encountered in the original database. Therefore, there might be cases where the mapping is not 100% accurate. If you have such doubts for particular results, please try searching the original ID on the Ensembl website and see if we got a correct mapped ID.</p>
 </div>
 <div id="code-example" class="section level1">
