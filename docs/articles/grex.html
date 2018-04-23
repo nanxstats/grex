@@ -29,7 +29,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">grex</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.7</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.8</span>
       </span>
     </div>
 
@@ -73,7 +73,7 @@
       <h1>Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;<br> Gao Wang &lt;<a href="mailto:gaow@uchicago.edu">gaow@uchicago.edu</a>&gt;<br> Lei Sun &lt;<a href="mailto:sunl@uchicago.edu">sunl@uchicago.edu</a>&gt;</h4>
             
-            <h4 class="date">2018-04-19</h4>
+            <h4 class="date">2018-04-23</h4>
       
       <small>Source: <a href="https://github.com/road2stat/grex/blob/master/vignettes/grex.Rmd"><code>vignettes/grex.Rmd</code></a></small>
       <div class="hidden name"><code>grex.Rmd</code></div>
@@ -98,10 +98,10 @@
 <div id="code-example" class="section level1">
 <h1 class="hasAnchor">
 <a href="#code-example" class="anchor"></a>Code Example</h1>
-<p>As an example, we use the Ensembl IDs from GTEx V6p gene count data and select 100 IDs:</p>
+<p>As an example, we use the Ensembl IDs from GTEx V7 gene count data and select 100 IDs:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"grex"</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">data</span>(<span class="st">"gtexv6p"</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">id =<span class="st"> </span>gtexv6p[<span class="dv">101</span><span class="op">:</span><span class="dv">200</span>]</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">data</span>(<span class="st">"gtexv7"</span>)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">id =<span class="st"> </span>gtexv7[<span class="dv">101</span><span class="op">:</span><span class="dv">200</span>]</a>
 <a class="sourceLine" id="cb1-4" data-line-number="4">df =<span class="st"> </span><span class="kw"><a href="../reference/grex.html">grex</a></span>(id)</a>
 <a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">tail</span>(df)</a></code></pre></div>
 <pre><code>##          ensembl_id entrez_id hgnc_symbol                                   hgnc_name
@@ -120,9 +120,10 @@
 ## 100  1p36.32       &lt;NA&gt;        lincRNA</code></pre>
 <p>The elements which cannot be mapped accurately will be <code>NA</code>.</p>
 <p>Genes with a mapped Entrez ID:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">filtered_genes =<span class="st"> </span>df[<span class="op">!</span><span class="kw">is.na</span>(df<span class="op">$</span><span class="st">"entrez_id"</span>),</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">                    <span class="kw">c</span>(<span class="st">"ensembl_id"</span>, <span class="st">"entrez_id"</span>, <span class="st">"hgnc_symbol"</span>, <span class="st">"gene_biotype"</span>)]</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">head</span>(filtered_genes)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">filtered_genes =</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">  </span>df[<span class="op">!</span><span class="kw">is.na</span>(df<span class="op">$</span><span class="st">"entrez_id"</span>),</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">     <span class="kw">c</span>(<span class="st">"ensembl_id"</span>, <span class="st">"entrez_id"</span>, <span class="st">"hgnc_symbol"</span>, <span class="st">"gene_biotype"</span>)]</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw">head</span>(filtered_genes)</a></code></pre></div>
 <pre><code>##        ensembl_id entrez_id hgnc_symbol         gene_biotype
 ## 1 ENSG00000162576     54587       MXRA8       protein_coding
 ## 2 ENSG00000175756     54998    AURKAIP1       protein_coding
@@ -140,7 +141,7 @@
 <div id="acknowledgements" class="section level1">
 <h1 class="hasAnchor">
 <a href="#acknowledgements" class="anchor"></a>Acknowledgements</h1>
-<p>We thank the members of the <a href="http://stephenslab.uchicago.edu">Stephens lab</a> (Kushal K Dey, Michael Turchin) for their valuable suggestions and helpful discussions on this problem.</p>
+<p>We thank members of the <a href="http://stephenslab.uchicago.edu">Stephens lab</a> (Kushal K Dey, Michael Turchin) for their valuable suggestions and helpful discussions on this problem.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
