@@ -2,11 +2,15 @@
 #
 # This script works under the `grex` package directory
 #
-# Get package source link from:
-# https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html
+# Get the latest `org.Hs.eg.db` version from:
+# https://bioconductor.org/packages/devel/data/annotation/html/org.Hs.eg.db.html
 
-system('wget https://bioconductor.org/packages/release/data/annotation/src/contrib/org.Hs.eg.db_3.4.2.tar.gz -P ~/')
-system('tar -xvf ~/org.Hs.eg.db_3.4.2.tar.gz -C ~/')
+ver = '3.6.0'
+system(paste0(
+  'curl https://bioconductor.org/packages/devel/data/annotation/src/contrib/org.Hs.eg.db_',
+  ver, '.tar.gz --output ~/org.Hs.eg.db.tar.gz'
+))
+system(paste0('tar -xvf ~/org.Hs.eg.db.tar.gz -C ~/'))
 
 # connect to the SQLite db
 library('DBI')
@@ -70,7 +74,9 @@ row.names(gene_type_table) = gene_type_table$'ensembl_gene_id'
 grex_db$'gene_biotype' = gene_type_table[grex_db$'ensembl_id', 'gene_biotype']
 
 # clean up workspace
-rm(list = c('con', 'key', 'cytogenetic_locations', 'ensembl', 'gene_info', 'genes', 'uniprot', 'ensembl_mart', 'ensembl_ids', 'gene_type_table'))
+rm(list = c(
+  'ver', 'con', 'key', 'cytogenetic_locations', 'ensembl', 'gene_info',
+  'genes', 'uniprot', 'ensembl_mart', 'ensembl_ids', 'gene_type_table'))
 
 # save grex db to package directory
 save(grex_db, file = 'R/sysdata.rda', compress = 'xz')
