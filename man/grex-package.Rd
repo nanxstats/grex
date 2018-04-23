@@ -16,6 +16,6 @@ License: \tab GPL-3\cr }
 }
 \author{
 Nan Xiao <\email{me@nanx.me}>,
-        Gao Wang <\email{gaow@uchicago.edu}>,
-        Lei Sun <\email{sunl@uchicago.edu}>
+Gao Wang <\email{gaow@uchicago.edu}>,
+Lei Sun <\email{sunl@uchicago.edu}>
 }

@@ -10,7 +10,8 @@
 #'
 #' @name grex-package
 #' @docType package
-#' @author Nan Xiao <\email{me@@nanx.me}>,
-#'         Gao Wang <\email{gaow@@uchicago.edu}>,
-#'         Lei Sun <\email{sunl@@uchicago.edu}>
+#' @author
+#' Nan Xiao <\email{me@@nanx.me}>,
+#' Gao Wang <\email{gaow@@uchicago.edu}>,
+#' Lei Sun <\email{sunl@@uchicago.edu}>
 NULL
