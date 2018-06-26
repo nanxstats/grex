@@ -10,9 +10,10 @@ Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
 \details{
 Opened the vignette via \code{vignette("grex")}.
 
-\tabular{ll}{ Package: \tab grex\cr
+\tabular{ll}{
+Package: \tab grex\cr
 Type: \tab Package\cr
-License: \tab GPL-3\cr }
+License: \tab GPL-3}
 }
 \author{
 Nan Xiao <\email{me@nanx.me}>,
