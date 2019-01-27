@@ -2,21 +2,31 @@
 % Please edit documentation in R/grex-package.R
 \docType{package}
 \name{grex-package}
+\alias{grex}
 \alias{grex-package}
-\title{Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data}
+\title{grex: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data}
 \description{
-Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
+Convert 'Ensembl' gene identifiers from Genotype-Tissue
+    Expression (GTEx) data to identifiers in other annotation systems,
+    including 'Entrez', 'HGNC', and 'UniProt'.
 }
-\details{
-Opened the vignette via \code{vignette("grex")}.
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://nanx.me/grex/}
+  \item \url{https://github.com/road2stat/grex}
+  \item Report bugs at \url{https://github.com/road2stat/grex/issues}
+}
 
-\tabular{ll}{
-Package: \tab grex\cr
-Type: \tab Package\cr
-License: \tab GPL-3}
 }
 \author{
-Nan Xiao <\email{me@nanx.me}>,
-Gao Wang <\email{gaow@uchicago.edu}>,
-Lei Sun <\email{sunl@uchicago.edu}>
+\strong{Maintainer}: Nan Xiao \email{me@nanx.me} (0000-0002-0250-5673)
+
+Authors:
+\itemize{
+  \item Gao Wang \email{gaow@uchicago.edu}
+  \item Lei Sun \email{sunl@uchicago.edu}
 }
+
+}
+\keyword{internal}
