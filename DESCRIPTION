@@ -15,8 +15,8 @@ Description: Convert 'Ensembl' gene identifiers from Genotype-Tissue
 License: GPL-3 | file LICENSE
 LazyData: TRUE
 VignetteBuilder: knitr
-URL: https://nanx.me/grex/, https://github.com/road2stat/grex
-BugReports: https://github.com/road2stat/grex/issues
+URL: https://nanx.me/grex/, https://github.com/nanxstats/grex
+BugReports: https://github.com/nanxstats/grex/issues
 Depends:
     R (>= 3.0.2)
 Suggests:

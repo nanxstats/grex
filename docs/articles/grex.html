@@ -55,7 +55,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/road2stat/grex">
+  <a href="https://github.com/nanxstats/grex">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -75,9 +75,9 @@
       <h1>Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;<br> Gao Wang &lt;<a href="https://home.uchicago.edu/gaow/" class="uri">https://home.uchicago.edu/gaow/</a>&gt;<br> Lei Sun &lt;<a href="mailto:sunl@uchicago.edu" class="email">sunl@uchicago.edu</a>&gt;</h4>
             
-            <h4 class="date">2019-02-10</h4>
+            <h4 class="date">2019-03-18</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/road2stat/grex/blob/master/vignettes/grex.Rmd"><code>vignettes/grex.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nanxstats/grex/blob/master/vignettes/grex.Rmd"><code>vignettes/grex.Rmd</code></a></small>
       <div class="hidden name"><code>grex.Rmd</code></div>
 
     </div>
@@ -94,7 +94,7 @@
 <div id="mapping-table" class="section level1">
 <h1 class="hasAnchor">
 <a href="#mapping-table" class="anchor"></a>Mapping Table</h1>
-<p>To facilitate such ID conversion tasks, the <code>grex</code> package has a built-in mapping table derived from the well-known annotation data package <code>org.Hs.eg.db</code> <span class="citation">(Carlson 2015)</span>. The mapping data we used has integrated mapping information from Ensembl and NCBI, to maximize the possibility of finding a matched Entrez ID. The R script for creating the mapping table is located <a href="https://github.com/road2stat/grex/blob/master/data-raw/mapping-table-generator.R">here</a>.</p>
+<p>To facilitate such ID conversion tasks, the <code>grex</code> package has a built-in mapping table derived from the well-known annotation data package <code>org.Hs.eg.db</code> <span class="citation">(Carlson 2015)</span>. The mapping data we used has integrated mapping information from Ensembl and NCBI, to maximize the possibility of finding a matched Entrez ID. The R script for creating the mapping table is located <a href="https://github.com/nanxstats/grex/blob/master/data-raw/mapping-table-generator.R">here</a>.</p>
 <p>Not surprisingly, when creating such a table, there were hundreds of cases where a single Ensembl ID can be mapped to multiple Entrez gene IDs. To create a one-to-one mapping, we took a simple approach: we just removed the duplicated Entrez IDs and only kept the first we encountered in the original database. Therefore, there might be cases where the mapping is not 100% accurate. If you have such doubts for particular results, please try searching the original ID on the Ensembl website and see if we got a correct mapped ID.</p>
 </div>
 <div id="code-example" class="section level1">
