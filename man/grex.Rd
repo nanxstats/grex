@@ -31,9 +31,11 @@ with basic annotation information such as gene type.
 # Ensembl IDs in GTEx v6p gene count data
 data("gtexv6p")
 # select 100 IDs as example
-id = gtexv6p[101:200]
-df = grex(id)
+id <- gtexv6p[101:200]
+df <- grex(id)
 # Rows that have a mapped Entrez ID
-df[!is.na(df$"entrez_id"),
-   c("ensembl_id", "entrez_id", "gene_biotype")]
+df[
+  !is.na(df$"entrez_id"),
+  c("ensembl_id", "entrez_id", "gene_biotype")
+]
 }

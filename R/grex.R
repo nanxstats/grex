@@ -24,33 +24,34 @@
 #' # Ensembl IDs in GTEx v6p gene count data
 #' data("gtexv6p")
 #' # select 100 IDs as example
-#' id = gtexv6p[101:200]
-#' df = grex(id)
+#' id <- gtexv6p[101:200]
+#' df <- grex(id)
 #' # Rows that have a mapped Entrez ID
-#' df[!is.na(df$"entrez_id"),
-#'    c("ensembl_id", "entrez_id", "gene_biotype")]
-grex = function(ensembl_id) {
-
-  id = as.character(ensembl_id)
+#' df[
+#'   !is.na(df$"entrez_id"),
+#'   c("ensembl_id", "entrez_id", "gene_biotype")
+#' ]
+grex <- function(ensembl_id) {
+  id <- as.character(ensembl_id)
 
   # Ensembl ID sanity check
-  if (any(grepl('\\.', id)))
+  if (any(grepl("\\.", id))) {
     stop('"." found in the IDs, please use cleanid() or your method to remove them first.', call. = FALSE)
+  }
 
   # initialize matrix
-  n = length(id)
-  m = ncol(grex_db)
-  mat = matrix(NA, nrow = n, ncol = m)
-  id_names = colnames(grex_db)
-  colnames(mat) = id_names
+  n <- length(id)
+  m <- ncol(grex_db)
+  mat <- matrix(NA, nrow = n, ncol = m)
+  id_names <- colnames(grex_db)
+  colnames(mat) <- id_names
 
   # fill matrix with mapped IDs
-  mat[, 'ensembl_id'] = id
-  mat[, 2L:m] = as.matrix(grex_db[id, 2L:m])
+  mat[, "ensembl_id"] <- id
+  mat[, 2L:m] <- as.matrix(grex_db[id, 2L:m])
 
-  df = as.data.frame(mat, stringsAsFactors = FALSE)
+  df <- as.data.frame(mat, stringsAsFactors = FALSE)
   df
-
 }
 
 #' Remove Version Numbers in Raw GTEx (GENCODE) Gene IDs
@@ -65,6 +66,6 @@ grex = function(ensembl_id) {
 #' @export cleanid
 #'
 #' @examples
-#' gtex_id = c("ENSG00000227232.4", "ENSG00000223972.4", "ENSG00000268020.2")
+#' gtex_id <- c("ENSG00000227232.4", "ENSG00000223972.4", "ENSG00000268020.2")
 #' cleanid(gtex_id)
-cleanid = function(gtex_id) sapply(strsplit(gtex_id, '\\.'), '[', 1L)
+cleanid <- function(gtex_id) sapply(strsplit(gtex_id, "\\."), "[", 1L)

@@ -17,6 +17,6 @@ Remove the `.version` part in raw GTEx (GENCODE) gene IDs to
 produce Ensembl IDs.
 }
 \examples{
-gtex_id = c("ENSG00000227232.4", "ENSG00000223972.4", "ENSG00000268020.2")
+gtex_id <- c("ENSG00000227232.4", "ENSG00000223972.4", "ENSG00000268020.2")
 cleanid(gtex_id)
 }
