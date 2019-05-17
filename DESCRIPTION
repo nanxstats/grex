@@ -18,7 +18,7 @@ VignetteBuilder: knitr
 URL: https://nanx.me/grex/, https://github.com/nanxstats/grex
 BugReports: https://github.com/nanxstats/grex/issues
 Depends:
-    R (>= 3.0.2)
+    R (>= 3.5.0)
 Suggests:
     knitr,
     rmarkdown
