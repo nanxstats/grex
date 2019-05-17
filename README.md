@@ -24,12 +24,6 @@ devtools::install_github("nanxstats/grex")
 
 [Browse the vignette](https://nanx.me/grex/articles/grex.html) (or open with `vignette("grex")` in R) for a quick-start guide.
 
-## Links
-
-* Website: [https://nanx.me/grex/](https://nanx.me/grex/)
-* CRAN: [https://cran.r-project.org/package=grex](https://cran.r-project.org/package=grex)
-* GitHub: [https://github.com/nanxstats/grex](https://github.com/nanxstats/grex)
-
 ## Contribute
 
 To contribute to this project, please take a look at the [Contributing Guidelines](CONTRIBUTING.md) first. Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
