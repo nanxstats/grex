@@ -66,7 +66,7 @@ with basic annotation information such as gene type." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">grex</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.8</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.9</span>
       </span>
     </div>
 
@@ -149,11 +149,13 @@ same number of rows as the length of input Ensembl IDs, containing:</p><ul>
     <pre class="examples"><div class='input'><span class='co'># Ensembl IDs in GTEx v6p gene count data</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='st'>"gtexv6p"</span>)
 <span class='co'># select 100 IDs as example</span>
-<span class='no'>id</span> <span class='kw'>=</span> <span class='no'>gtexv6p</span>[<span class='fl'>101</span>:<span class='fl'>200</span>]
-<span class='no'>df</span> <span class='kw'>=</span> <span class='fu'>grex</span>(<span class='no'>id</span>)
+<span class='no'>id</span> <span class='kw'>&lt;-</span> <span class='no'>gtexv6p</span>[<span class='fl'>101</span>:<span class='fl'>200</span>]
+<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'>grex</span>(<span class='no'>id</span>)
 <span class='co'># Rows that have a mapped Entrez ID</span>
-<span class='no'>df</span>[!<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/NA'>is.na</a></span>(<span class='no'>df</span>$<span class='st'>"entrez_id"</span>),
-   <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"ensembl_id"</span>, <span class='st'>"entrez_id"</span>, <span class='st'>"gene_biotype"</span>)]</div><div class='output co'>#&gt;          ensembl_id entrez_id                     gene_biotype
+<span class='no'>df</span>[
+  !<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/NA'>is.na</a></span>(<span class='no'>df</span>$<span class='st'>"entrez_id"</span>),
+  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"ensembl_id"</span>, <span class='st'>"entrez_id"</span>, <span class='st'>"gene_biotype"</span>)
+]</div><div class='output co'>#&gt;          ensembl_id entrez_id                     gene_biotype
 #&gt; 1   ENSG00000162576     54587                   protein_coding
 #&gt; 2   ENSG00000175756     54998                   protein_coding
 #&gt; 4   ENSG00000221978     81669                   protein_coding
