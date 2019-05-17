@@ -1,15 +1,23 @@
+# grex 1.9 (2019-05-17)
+
+## Improvements
+
+- Updated the reference database from the latest development version of `org.Hs.eg.db` (3.8.2).
+- Updated GitHub repository links due to the recent handle change.
+- Updated the vignette style.
+
 # grex 1.8 (2018-04-23)
 
 ## Improvements
 
-- Update reference database from the latest development version of `org.Hs.eg.db` (3.6.0).
+- Update the reference database from the latest development version of `org.Hs.eg.db` (3.6.0).
 - Add GTEx V7 Ensembl ID data: `gtexv7`.
 
 # grex 1.7 (2017-11-05)
 
 ## Improvements
 
-- Update reference database from the latest release version of `org.Hs.eg.db` (3.4.2).
+- Update the reference database from the latest release version of `org.Hs.eg.db` (3.4.2).
 
 # grex 1.6 (2017-09-27)
 
