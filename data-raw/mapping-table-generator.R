@@ -5,7 +5,7 @@
 # Get the latest `org.Hs.eg.db` version from:
 # https://bioconductor.org/packages/devel/data/annotation/html/org.Hs.eg.db.html
 
-ver <- "3.6.0"
+ver <- "3.8.2"
 system(paste0(
   "curl https://bioconductor.org/packages/devel/data/annotation/src/contrib/org.Hs.eg.db_",
   ver, ".tar.gz --output ~/org.Hs.eg.db.tar.gz"
