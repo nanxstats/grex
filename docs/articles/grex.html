@@ -6,20 +6,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data • grex</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="grex">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -56,7 +56,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/nanxstats/grex">
+  <a href="https://github.com/nanxstats/grex/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -71,13 +71,13 @@
 
       
 
-      </header><div class="row">
+      </header><script src="grex_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data</h1>
+      <h1 data-toc-skip>Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;<br> Gao Wang &lt;<a href="https://home.uchicago.edu/gaow/" class="uri">https://home.uchicago.edu/gaow/</a>&gt;<br> Lei Sun &lt;<a href="mailto:sunl@uchicago.edu" class="email">sunl@uchicago.edu</a>&gt;</h4>
             
-            <h4 class="date">2019-10-20</h4>
+            <h4 class="date">2020-04-23</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nanxstats/grex/blob/master/vignettes/grex.Rmd"><code>vignettes/grex.Rmd</code></a></small>
       <div class="hidden name"><code>grex.Rmd</code></div>
@@ -103,11 +103,11 @@
 <h1 class="hasAnchor">
 <a href="#code-example" class="anchor"></a>Code Example</h1>
 <p>As an example, we use the Ensembl IDs from GTEx V7 gene count data and select 100 IDs:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"grex"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">"gtexv7"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3"></a>id &lt;-<span class="st"> </span>gtexv7[<span class="dv">101</span><span class="op">:</span><span class="dv">200</span>]</span>
-<span id="cb1-4"><a href="#cb1-4"></a>df &lt;-<span class="st"> </span><span class="kw"><a href="../reference/grex.html">grex</a></span>(id)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(df)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"grex"</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">"gtexv7"</span>)
+<span class="no">id</span> <span class="kw">&lt;-</span> <span class="no">gtexv7</span>[<span class="fl">101</span>:<span class="fl">200</span>]
+<span class="no">df</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/grex.html">grex</a></span>(<span class="no">id</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="no">df</span>)</pre></body></html></div>
 <pre><code>##          ensembl_id entrez_id hgnc_symbol                                   hgnc_name
 ## 95  ENSG00000266075      &lt;NA&gt;        &lt;NA&gt;                                        &lt;NA&gt;
 ## 96  ENSG00000272153      &lt;NA&gt;        &lt;NA&gt;                                        &lt;NA&gt;
@@ -124,12 +124,12 @@
 ## 100  1p36.32       &lt;NA&gt;        lincRNA</code></pre>
 <p>The elements which cannot be mapped accurately will be <code>NA</code>.</p>
 <p>Genes with a mapped Entrez ID:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>filtered_genes &lt;-</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span>df[</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(df<span class="op">$</span><span class="st">"entrez_id"</span>),</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ensembl_id"</span>, <span class="st">"entrez_id"</span>, <span class="st">"hgnc_symbol"</span>, <span class="st">"gene_biotype"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>  ]</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(filtered_genes)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">filtered_genes</span> <span class="kw">&lt;-</span>
+  <span class="no">df</span>[
+    !<span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(<span class="no">df</span>$<span class="st">"entrez_id"</span>),
+    <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ensembl_id"</span>, <span class="st">"entrez_id"</span>, <span class="st">"hgnc_symbol"</span>, <span class="st">"gene_biotype"</span>)
+  ]
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">filtered_genes</span>)</pre></body></html></div>
 <pre><code>##        ensembl_id entrez_id hgnc_symbol         gene_biotype
 ## 1 ENSG00000162576     54587       MXRA8       protein_coding
 ## 2 ENSG00000175756     54998    AURKAIP1       protein_coding
@@ -152,7 +152,7 @@
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h1>
-<div id="refs" class="references">
+<div id="refs" class="references hanging-indent">
 <div id="ref-hsdb">
 <p>Carlson, Marc. 2015. <em>org.Hs.eg.db: Genome Wide Annotation for Human</em>.</p>
 </div>
@@ -163,21 +163,11 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#introduction">Introduction</a></li>
-      <li><a href="#mapping-table">Mapping Table</a></li>
-      <li><a href="#code-example">Code Example</a></li>
-      <li><a href="#whats-next">What’s Next?</a></li>
-      <li><a href="#acknowledgements">Acknowledgements</a></li>
-      <li><a href="#references">References</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
@@ -188,7 +178,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
