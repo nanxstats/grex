@@ -4,7 +4,9 @@
 \name{gtexv6}
 \alias{gtexv6}
 \title{Ensembl IDs from GTEx V6 Gene Read Count Data}
-\format{A character vector with 56,318 Ensembl IDs.}
+\format{
+A character vector with 56,318 Ensembl IDs.
+}
 \source{
 \url{https://www.gtexportal.org}
 }
