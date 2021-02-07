@@ -1,9 +1,8 @@
 ---
 title: "Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data"
 author: "Nan Xiao <<https://nanx.me>><br>
-         Gao Wang <<https://home.uchicago.edu/gaow/>><br>
+         Gao Wang <<https://www.tigerwang.org>><br>
          Lei Sun <<sunl@uchicago.edu>>"
-date: "`r Sys.Date()`"
 bibliography: grex.bib
 output:
   rmarkdown::html_document:
