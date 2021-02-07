@@ -8,6 +8,13 @@
 
 <title>Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data — grex • grex</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -44,6 +51,7 @@
 <meta property="og:title" content="Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data — grex" />
 <meta property="og:description" content="Map Ensembl IDs to Entrez Gene ID, HGNC symbol, and UniProt ID,
 with basic annotation information such as gene type." />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -83,7 +91,7 @@ with basic annotation information such as gene type." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -100,7 +108,7 @@ with basic annotation information such as gene type." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/grex/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -127,7 +135,7 @@ with basic annotation information such as gene type." />
 with basic annotation information such as gene type.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>grex</span>(<span class='no'>ensembl_id</span>)</pre>
+    <pre class="usage"><span class='fu'>grex</span><span class='op'>(</span><span class='va'>ensembl_id</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -153,15 +161,16 @@ same number of rows as the length of input Ensembl IDs, containing:</p><ul>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Ensembl IDs in GTEx v6p gene count data</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"gtexv6p"</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"gtexv6p"</span><span class='op'>)</span>
 <span class='co'># select 100 IDs as example</span>
-<span class='no'>id</span> <span class='kw'>&lt;-</span> <span class='no'>gtexv6p</span>[<span class='fl'>101</span>:<span class='fl'>200</span>]
-<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'>grex</span>(<span class='no'>id</span>)
+<span class='va'>id</span> <span class='op'>&lt;-</span> <span class='va'>gtexv6p</span><span class='op'>[</span><span class='fl'>101</span><span class='op'>:</span><span class='fl'>200</span><span class='op'>]</span>
+<span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'>grex</span><span class='op'>(</span><span class='va'>id</span><span class='op'>)</span>
 <span class='co'># Rows that have a mapped Entrez ID</span>
-<span class='no'>df</span>[
-  !<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>df</span>$<span class='st'>"entrez_id"</span>),
-  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"ensembl_id"</span>, <span class='st'>"entrez_id"</span>, <span class='st'>"gene_biotype"</span>)
-]</div><div class='output co'>#&gt;          ensembl_id entrez_id                     gene_biotype
+<span class='va'>df</span><span class='op'>[</span>
+  <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>df</span><span class='op'>$</span><span class='st'>"entrez_id"</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"ensembl_id"</span>, <span class='st'>"entrez_id"</span>, <span class='st'>"gene_biotype"</span><span class='op'>)</span>
+<span class='op'>]</span>
+</div><div class='output co'>#&gt;          ensembl_id entrez_id                     gene_biotype
 #&gt; 1   ENSG00000162576     54587                   protein_coding
 #&gt; 2   ENSG00000175756     54998                   protein_coding
 #&gt; 4   ENSG00000221978     81669                   protein_coding
@@ -238,7 +247,7 @@ same number of rows as the length of input Ensembl IDs, containing:</p><ul>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
