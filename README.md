@@ -1,7 +1,5 @@
 # grex  <a href="https://nanx.me/grex/"><img src="man/figures/logo.png" align="right" height="180" /></a>
 
-[![Build Status](https://travis-ci.org/nanxstats/grex.svg?branch=master)](https://travis-ci.org/nanxstats/grex)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/nanxstats/grex?branch=master&svg=true)](https://ci.appveyor.com/project/nanxstats/grex)
 [![CRAN Version](https://www.r-pkg.org/badges/version/grex)](https://cran.r-project.org/package=grex)
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/grex)](https://cranlogs.r-pkg.org/badges/grex)
 
