@@ -9,13 +9,20 @@ output:
     toc: true
     toc_float: false
     toc_depth: 4
-    number_sections: true
+    number_sections: false
     highlight: "textmate"
     css: "custom.css"
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data}
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
 
 # Introduction
 
@@ -38,7 +45,7 @@ such as HGNC gene name, cytogenetic location, and gene type.
 We also limit our scope on the Ensembl IDs appeared in the gene read count data.
 Ensembl IDs from transcript data will be considered in future versions.
 
-# Mapping Table
+# Mapping table
 
 To facilitate such ID conversion tasks, the `grex` package has a built-in
 mapping table derived from the well-known annotation data package
@@ -56,7 +63,7 @@ not 100% accurate. If you have such doubts for particular results,
 please try searching the original ID on the Ensembl website and see if we
 got a correct mapped ID.
 
-# Code Example
+# Code example
 
 As an example, we use the Ensembl IDs from GTEx V7 gene count data
 and select 100 IDs:
@@ -90,7 +97,7 @@ If you want to start from the raw GENCODE gene IDs provided by GTEx
 (e.g. `ENSG00000227232.4`), the function `cleanid()` can help you
 remove the `.version` part in them, to produce Ensembl IDs.
 
-# What's Next?
+# What's next?
 
 Conventionally, the next step is removing (or imputing) the genes
 with `NA` IDs, and then select the genes to keep.

@@ -1,4 +1,4 @@
-# grex  <a href="https://nanx.me/grex/"><img src="man/figures/logo.png" align="right" height="180" /></a>
+# grex <img src="man/figures/logo.png" align="right" width="120" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/nanxstats/grex/workflows/R-CMD-check/badge.svg)](https://github.com/nanxstats/grex/actions)
@@ -19,11 +19,10 @@ install.packages("grex")
 Or try the development version on GitHub:
 
 ```r
-# install.packages("devtools")
-devtools::install_github("nanxstats/grex")
+remotes::install_github("nanxstats/grex")
 ```
 
-[Browse the vignette](https://nanx.me/grex/articles/grex.html) (or open with `vignette("grex")` in R) for a quick-start guide.
+See `vignette("grex")` for a quick-start guide.
 
 ## Contribute
 
