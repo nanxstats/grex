@@ -1,7 +1,10 @@
-pandoc: 2.11.4
-pkgdown: 1.6.1
+pandoc: 2.16.2
+pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   grex: grex.html
-last_built: 2021-03-04T02:36Z
+last_built: 2021-12-21T04:06Z
+urls:
+  reference: https://nanx.me/grex/reference
+  article: https://nanx.me/grex/articles
 
