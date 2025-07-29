@@ -3,6 +3,7 @@
 
 ^CODE_OF_CONDUCT\.md$
 ^CONTRIBUTING\.md$
+^LICENSE\.md$
 ^data-raw$
 
 ^_pkgdown\.yml$
@@ -10,3 +11,5 @@
 ^docs$
 
 ^\.github$
+
+^inst/logo/logo\.R$
