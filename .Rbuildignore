@@ -10,3 +10,5 @@
 ^docs$
 
 ^\.github$
+
+^inst/logo/logo\.R$
