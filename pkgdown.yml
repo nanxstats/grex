@@ -3,7 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   grex: grex.html
-last_built: 2025-07-29T20:12Z
+last_built: 2025-07-29T20:20Z
 urls:
   reference: https://nanx.me/grex/reference
   article: https://nanx.me/grex/articles
