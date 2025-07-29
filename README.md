@@ -1,7 +1,7 @@
 # grex <img src="man/figures/logo.png" align="right" width="120" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/nanxstats/grex/workflows/R-CMD-check/badge.svg)](https://github.com/nanxstats/grex/actions)
+[![R-CMD-check](https://github.com/nanxstats/grex/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nanxstats/grex/actions/workflows/R-CMD-check.yaml)
 [![CRAN Version](https://www.r-pkg.org/badges/version/grex)](https://cran.r-project.org/package=grex)
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/grex)](https://cranlogs.r-pkg.org/badges/grex)
 <!-- badges: end -->
