@@ -1,14 +1,12 @@
 Package: grex
-Type: Package
 Title: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data
-Version: 1.9
+Version: 1.9.1
 Authors@R: c(
     person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-0250-5673")),
     person("Gao", "Wang", email = "gaow@uchicago.edu", role = "aut"),
     person("Lei", "Sun", email = "sunl@uchicago.edu", role = "aut")
     )
-Maintainer: Nan Xiao <me@nanx.me>
 Description: Convert 'Ensembl' gene identifiers from Genotype-Tissue
     Expression (GTEx) data to identifiers in other annotation systems,
     including 'Entrez', 'HGNC', and 'UniProt'.
