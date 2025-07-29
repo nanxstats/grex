@@ -6,11 +6,13 @@
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/grex)](https://cranlogs.r-pkg.org/badges/grex)
 <!-- badges: end -->
 
-`grex` offers a minimal dependency solution for mapping Ensembl gene IDs to Entrez IDs, HGNC gene symbols, and UniProt IDs, for Genotype-Tissue Expression (GTEx) data.
+grex offers a minimal dependency solution for mapping Ensembl gene IDs
+to Entrez IDs, HGNC gene symbols, and UniProt IDs,
+for Genotype-Tissue Expression (GTEx) data.
 
 ## Installation
 
-Install `grex` from CRAN:
+Install grex from CRAN:
 
 ```r
 install.packages("grex")
@@ -26,4 +28,8 @@ See `vignette("grex")` for a quick-start guide.
 
 ## Contribute
 
-To contribute to this project, please take a look at the [Contributing Guidelines](CONTRIBUTING.md) first. Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+To contribute to this project, please take a look at the [Contributing
+Guidelines](https://nanx.me/grex/CONTRIBUTING.html) first. Please note
+that the RECA project is released with a [Contributor Code of
+Conduct](https://nanx.me/grex/CODE_OF_CONDUCT.html). By contributing to
+this project, you agree to abide by its terms.
