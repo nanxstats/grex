@@ -4,7 +4,7 @@
 #' gene read count data.
 #'
 #' @format A character vector with 56,318 Ensembl IDs.
-#' @source \url{https://www.gtexportal.org}
+#' @source \url{https://www.gtexportal.org/home/}
 "gtexv6"
 
 #' Ensembl IDs from GTEx V6p Gene Read Count Data
@@ -13,7 +13,7 @@
 #' gene read count data.
 #'
 #' @format A character vector with 56,238 Ensembl IDs.
-#' @source \url{https://www.gtexportal.org}
+#' @source \url{https://www.gtexportal.org/home/}
 "gtexv6p"
 
 #' Ensembl IDs from GTEx V7 Gene Read Count Data
@@ -22,5 +22,5 @@
 #' gene read count data.
 #'
 #' @format A character vector with 56,202 Ensembl IDs.
-#' @source \url{https://www.gtexportal.org}
+#' @source \url{https://www.gtexportal.org/home/}
 "gtexv7"

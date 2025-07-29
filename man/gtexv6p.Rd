@@ -8,7 +8,7 @@
 A character vector with 56,238 Ensembl IDs.
 }
 \source{
-\url{https://www.gtexportal.org}
+\url{https://www.gtexportal.org/home/}
 }
 \usage{
 gtexv6p
