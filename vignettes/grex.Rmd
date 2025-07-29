@@ -5,13 +5,10 @@ author: "Nan Xiao <<https://nanx.me>><br>
          Lei Sun <<sunl@uchicago.edu>>"
 bibliography: grex.bib
 output:
-  rmarkdown::html_document:
+  rmarkdown::html_vignette:
     toc: true
-    toc_float: false
-    toc_depth: 4
     number_sections: false
     highlight: "textmate"
-    css: "custom.css"
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data}
@@ -24,7 +21,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Introduction
+## Introduction
 
 The Genotype-Tissue Expression (GTEx) project [@gtex] aims at measuring human
 tissue-specific gene expression levels. With the collected data,
@@ -45,13 +42,13 @@ such as HGNC gene name, cytogenetic location, and gene type.
 We also limit our scope on the Ensembl IDs appeared in the gene read count data.
 Ensembl IDs from transcript data will be considered in future versions.
 
-# Mapping table
+## Mapping table
 
 To facilitate such ID conversion tasks, the `grex` package has a built-in
 mapping table derived from the well-known annotation data package
 `org.Hs.eg.db` [@hsdb]. The mapping data we used has integrated mapping
 information from Ensembl and NCBI, to maximize the possibility of finding
-a matched Entrez ID. The R script for creating the mapping table is located 
+a matched Entrez ID. The R script for creating the mapping table is located
 [here](https://github.com/nanxstats/grex/blob/master/data-raw/mapping-table-generator.R).
 
 Not surprisingly, when creating such a table, there were hundreds of cases
@@ -63,7 +60,7 @@ not 100% accurate. If you have such doubts for particular results,
 please try searching the original ID on the Ensembl website and see if we
 got a correct mapped ID.
 
-# Code example
+## Code example
 
 As an example, we use the Ensembl IDs from GTEx V7 gene count data
 and select 100 IDs:
@@ -97,7 +94,7 @@ If you want to start from the raw GENCODE gene IDs provided by GTEx
 (e.g. `ENSG00000227232.4`), the function `cleanid()` can help you
 remove the `.version` part in them, to produce Ensembl IDs.
 
-# What's next?
+## What's next?
 
 Conventionally, the next step is removing (or imputing) the genes
 with `NA` IDs, and then select the genes to keep.
@@ -105,10 +102,10 @@ Notably, as was observed in the complete gene read count data,
 in about 100 cases, multiple Ensembl IDs can be mapped to one
 single Entrez ID. Post-processing steps may also be needed for such genes.
 
-# Acknowledgements
+## Acknowledgements
 
 We thank members of the [Stephens lab](http://stephenslab.uchicago.edu)
 (Kushal K Dey, Michael Turchin) for their valuable suggestions
 and helpful discussions on this problem.
 
-# References
+## References
